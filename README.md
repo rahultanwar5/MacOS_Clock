@@ -29,7 +29,7 @@ Contributions are welcome! If you'd like to contribute to this project, feel fre
 - Special thanks to the web development community for their valuable resources and support.
 
 **Demo:**
-![Clock Website Demo]()
+![Clock Website Demo](MacOS_Clock.png)
 
 **Note:**
 This website is developed for educational purposes and may not be suitable for production environments.
