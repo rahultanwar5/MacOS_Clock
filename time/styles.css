@@ -7,6 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+}
+
+body.light-mode {
+    background-color: white;
+    color: black;
 }
 
 .time-container {
@@ -49,6 +55,10 @@ body {
     perspective: 1000px;
 }
 
+body.light-mode .digit {
+    background-color: #ddd;
+}
+
 .digit.flip .top,
 .digit.flip .bottom {
     animation: flip 0.6s ease forwards;
@@ -73,4 +83,46 @@ body {
     position: absolute;
     transform: rotateX(180deg);
     backface-visibility: hidden;
+}
+
+/* Toggle switch styles */
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#mode-toggle {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-label::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.3s;
+}
+
+#mode-toggle:checked + .toggle-label {
+    background-color: #000000;
+}
+
+#mode-toggle:checked + .toggle-label::before {
+    transform: translateX(26px);
 }

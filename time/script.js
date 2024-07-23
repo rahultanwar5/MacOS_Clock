@@ -47,5 +47,11 @@ function updateOnNextMinute() {
     }, secondsUntilNextMinute * 1000);
 }
 
+function toggleMode() {
+    document.body.classList.toggle('light-mode');
+}
+
+document.getElementById('mode-toggle').addEventListener('change', toggleMode);
+
 updateTime();
 updateOnNextMinute();
